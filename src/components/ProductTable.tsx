@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Modal, Form, Input, Statistic, Card, Tooltip, Popconfirm } from 'antd';
+import { Table, Button, Statistic, Card, Tooltip, Popconfirm } from 'antd';
 import { observer } from 'mobx-react-lite';
 import { Product, useInventoryStore } from '../stores/InventoryStore';
 import EditProductModal from './EditProductModal';
