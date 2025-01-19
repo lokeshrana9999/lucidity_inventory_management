@@ -50,7 +50,7 @@ The application can be deployed on platforms like Vercel or Netlify. Ensure the 
 
 ## Documentation
 
-- **Implementation Video**: A walkthrough video is available in the `docs` directory.
+- **Implementation Video**: A walkthrough video is here 
 - **Code Documentation**: Inline comments and TypeScript types are used throughout the codebase.
 - **Setup Guide**: This README serves as the setup guide.
 
