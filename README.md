@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# Lucidity Inventory Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Lucidity Inventory Management is a web-based application designed to manage product inventory with dual user roles (admin/user). It features real-time updates and role-based access control.
 
-In the project directory, you can run:
+## Features
 
-### `yarn start`
+- **Admin Role**: Full access to all features, including editing, deleting, and disabling products.
+- **User Role**: Read-only access to view products and inventory statistics.
+- **Dashboard Widgets**: Display total products, store value, out-of-stock items, number of categories, and total inventory.
+- **Product Management**: List products in a table with sortable columns and action icons for admin operations.
+- **API Integration**: Fetch products from a simulated API endpoint.
+- **Responsive Design**: Mobile-friendly interface with clear role distinction.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technical Stack
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Frontend**: React with TypeScript
+- **State Management**: MobX
+- **UI Library**: Ant Design
+- **Styling**: CSS
+- **Deployment**: Vercel/Netlify
 
-### `yarn test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/lokeshrana9999/lucidity_inventory_management.git
+   cd lucidity_inventory_management
+   ```
 
-### `yarn build`
+2. **Install Dependencies**:
+   ```bash
+   yarn install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Run the Application**:
+   ```bash
+   yarn start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Build for Production**:
+   ```bash
+   yarn build
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployment
 
-### `yarn eject`
+The application can be deployed on platforms like Vercel or Netlify. Ensure the build command is set to `yarn build` and the output directory is `build`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Documentation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Implementation Video**: A walkthrough video is available in the `docs` directory.
+- **Code Documentation**: Inline comments and TypeScript types are used throughout the codebase.
+- **Setup Guide**: This README serves as the setup guide.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Evaluation Criteria
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Proficiency in React and JavaScript
+- Code quality and organization
+- UI/UX implementation
+- Feature completeness
+- Bonus: State management implementation
