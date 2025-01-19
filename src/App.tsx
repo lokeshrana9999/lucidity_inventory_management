@@ -1,27 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Layout } from 'antd';
+// import app css
 import './App.css';
-import { Button } from 'antd';
+import { observer } from 'mobx-react-lite';
+import Navigation from './components/Navigation';
+import ProductTable from './components/ProductTable';
+import { UserStoreProvider } from './stores/UserStore';
+import { InventoryStoreProvider } from './stores/InventoryStore';
 
-function App() {
+const { Header, Content } = Layout;
+
+const App: React.FC = observer(() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React <Button>Click me</Button>
-        </a>
-      </header>
-    </div>
+    <UserStoreProvider>
+      <InventoryStoreProvider>
+        <Layout>
+          <Header>
+            <Navigation />
+          </Header>
+          <Content>
+            <ProductTable />
+          </Content>
+        </Layout>
+      </InventoryStoreProvider>
+    </UserStoreProvider>
   );
-}
+});
 
 export default App;
