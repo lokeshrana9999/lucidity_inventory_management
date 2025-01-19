@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Button, Statistic, Card, Tooltip, Popconfirm } from 'antd';
+import { Table, Button, Statistic, Card, Tooltip, Popconfirm, Spin } from 'antd';
 import { observer } from 'mobx-react-lite';
 import { Product, useInventoryStore } from '../stores/InventoryStore';
 import EditProductModal from './EditProductModal';
@@ -98,6 +98,14 @@ const ProductTable: React.FC = observer(() => {
       ),
     },
   ];
+
+  if (inventoryStore.isLoading) {
+    return (
+      <div style={{ height: '100vh', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Spin size="large" />
+      </div>
+    );
+  }
 
   return (
     <>

@@ -14,6 +14,7 @@ export interface Product {
 
 class InventoryStore {
   products: Product[] = [];
+  isLoading: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -27,6 +28,9 @@ class InventoryStore {
   // Method to fetch products (simulated)
   async fetchProducts() {
     try {
+      runInAction(() => {
+        this.isLoading = true;
+      });
       const response = await fetch('https://dev-0tf0hinghgjl39z.api.raw-labs.com/inventory', {
         method: 'GET',
         headers: {
@@ -50,9 +54,13 @@ class InventoryStore {
       // ]
       runInAction(() => {
         this.setProducts(data);
+        this.isLoading = false;
       });
     } catch (error) {
       console.error('Error fetching products:', error);
+      runInAction(() => {
+        this.isLoading = false;
+      });
     }
   }
 
